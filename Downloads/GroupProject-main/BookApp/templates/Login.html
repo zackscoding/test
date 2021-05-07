@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Login.css' %}">
+    <title>Login Page</title>
+</head>
+<body>
+
+    <div id='wrapper'>
+        
+        <div id="container">
+            <h1>Book.com</h1>
+            {% if messages %}
+            <ul>    
+                {% for message in messages %}    
+                    <li>{{ message }}</li>    
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        
+            
+            <form action='/loginUser' method='POST'>
+                {% csrf_token %}
+          
+                <h3>Welcome Back!</h3>
+                
+                
+                <label><p>Email  </p>
+                    <input type = 'text' name= 'email' placeholder="Enter your Email here">
+                </label>
+
+                <label><p>Password</p>
+                    <input type = 'password' name= 'password' placeholder="Enter your Password here">
+                </label>
+
+                <input type='submit' value= 'Log in!'> 
+               
+            </form>
+            
+            
+            
+            
+            
+        
+        </div>
+    </div>
+
+</body>
+</html>

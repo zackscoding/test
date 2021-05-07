@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Bookcart.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div id='wrapper'>
+        <header>
+            <h1>Book.com</h1>
+            <nav>
+                <a href='/homePage'>Home</a>
+                <a href='/edit'>Profile</a>
+                <!-- <a href='/recentorder'>Recent Order</a> -->
+                <a href='/cart'>Cart</a>
+                <a href='/logout'>Log out</a>
+            </nav>
+        </header>
+
+        <div id='container'> 
+            <div class= 'holder'>
+                <!-- <h2> {{user.first_name}}'s Order </h2> 
+                {% for order in orders %} 
+                    <!-- <h2> {{order.user.first_name}}'s Order </h2>  -->
+                        <!-- {% if order in user.ordered_by.all %}
+                            <br>
+                            <p>Order Number: {{order.id}}</p>
+                            <p>{{order.book.title}}</p>
+                        {% endif %}
+                    {% endfor %}
+<!--  -->
+                    <!-- <button><a href="/checkout">Checkout</a></button>
+
+                    <button><a href="/delete">Delete Order</a></button> -->
+
+
+                     <h2> {{user.first_name}}'s Order </h2>
+                     <br>
+                <table style="width:100%" class='styled-table'>
+                  <thead>
+                      <tr>
+                        <th>Iten Number </th>
+                        <th>Item Purchase</th>
+                        <th>Author</th>
+                        <!-- <th> Date of purchase</th> -->
+                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                        
+                        {% for order in orders %} 
+                            {% if order in user.ordered_by.all %}
+                        <tr>
+                        <td>{{order.id}}</td>
+                          <td> {{order.book.title}}</td>
+                          <td> {{order.book.author}}</td>
+
+                        
+                        
+  
+                      
+                      </tr>
+                    </tbody>
+                            {% endif %}    
+                    {% endfor %} 
+                    
+                </table>
+                <div id='button_holder'>
+                    <button><a href="/checkout">Checkout</a></button>
+
+                    <button><a href="/delete">Delete Order</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

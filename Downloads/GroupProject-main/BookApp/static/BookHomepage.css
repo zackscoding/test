@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+
+* {
+    margin:0;
+    padding: 0;
+    /* outline: red dotted; */
+
+}
+
+#wrapper{
+    width: 100%;
+    margin: 0 auto;
+}
+
+header{
+    height: 80px;
+    background:#000046;
+    width: 100%;
+    z-index: 12 ;
+    position: fixed;
+    padding-top: 10px;
+    top: 0;
+    align-items: center;
+}
+
+#container {
+    margin-top: 190px;
+    width: 100%;
+    display: flex;
+   
+    
+}
+
+#container h1{
+    color: black;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+h1{
+    display: block;
+    margin-top: 0px;
+    margin-left: 55px;
+    padding:0;
+    color: white;
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 100;
+    
+    /* margin-left: 10px; */
+}
+
+
+
+nav{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    
+    
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+    text-align: center;
+    width: 100%;
+    font-family: Montserrat;
+    
+    
+
+}
+
+nav a:hover {
+    font-size: 20px;
+    color:green;
+
+}
+
+
+h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+    font-family: Montserrat;
+}
+.books {
+    display: inline-block;
+    width: 900px;
+    margin: auto;
+    
+}
+
+.books p{
+    display: block;
+    font-size: large;
+    margin-bottom: 10px;
+}
+
+img {
+    height: 300px;
+    width: 197px ;
+    display: inline;
+    margin-right: 15px;;
+    margin-bottom: 30px;
+    
+}
+.seperator {
+    display: inline-block;
+    width: 600px ;
+    vertical-align: top;
+}
+
+button{
+    background-color: #000046;
+    color: white;
+    font-weight: 300;
+    margin: auto;
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 70px;
+    display: inline-block;
+   
+}
+
+button:hover {
+    background-color: darkgreen;
+    width: 150px;
+    height: 60px;
+    font-size: large;
+}
+
+
+button a {
+    text-decoration: none;
+    color: white;
+    justify-content: center;
+    margin-top: 15px;
+    font-family: Montserrat;
+    
+    
+}

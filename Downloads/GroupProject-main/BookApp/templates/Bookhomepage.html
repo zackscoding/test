@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'BookHomepage.css' %}">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id='wrapper'>
+        <header>
+            <h1>Book.com</h1>
+            <nav>
+                <a href='/homePage'>Home</a>
+                <a href='/edit'>Profile</a>
+                <!-- <a href='/recentorder'>Recent Order</a> -->
+                <a href='/cart'>Cart</a>
+                <a href='/logout'>Log out</a>
+            </nav>
+        </header>
+
+        <div id='container'>
+            {% if messages %}
+                <ul>    
+                    {% for message in messages %}    
+                        <li>{{ message }}</li>    
+                    {% endfor %}
+                </ul>
+            {% endif %}
+           
+                    
+                    
+                    <div class="books">
+                        
+                        {% for book in books %}
+                        
+                        <img src='{% static "images/Book" %}{{book.id}}.jpg'>
+                        <div class='seperator'>  
+                            <h3>{{book.title}}</h3>
+                            <b><p>Author: </b> {{book.author}}</p>
+                            <b><p>Release Date: </b>{{book.yearPublished}}</p>
+                            <b><p> Genre: </b>{{book.genre}}</p>
+                             
+                            <button><a href="/viewbook/{{book.id}}">View Book</a> </button>
+                        </div> 
+                        <br>
+                        {% endfor %}
+
+                        {% for book in books %}
+                        
+                           
+                        {% endfor %}
+
+
+                        
+                    </div>
+
+
+
+        
+        </div>
+    </div>
+</body>
+
+</html>

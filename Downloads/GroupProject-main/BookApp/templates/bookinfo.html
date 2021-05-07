@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Bookinfo.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div id='wrapper'>
+        <header>
+            <h1>Book.com</h1>
+            <nav>
+                <a href='/homePage'>Home</a>
+                <a href='/edit'>Profile</a>
+                <!-- <a href='/recentorder'>Recent Order</a> -->
+                <a href='/cart'>Cart</a>
+                <a href='/logout'>Log out</a>
+            </nav>
+        </header>
+
+        <div id='container'>
+           
+                
+                
+            <div class= 'holder'>
+                <h2>{{thebook.title}} </h3>
+                    <br>
+                <h3>Author:</h3> <p>{{thebook.author}}</p>
+                <br>
+                <h3>Year Published:</h3>  <p> {{thebook.yearPublished}}</p>
+                <br>
+                <h3>Genre: </h3>  <p>{{thebook.genre}}</p>
+                <br>
+                <h3>Description:</h3> {{thebook.Description}}</p>
+
+                    
+                        
+                <button><a href ='/purchasebook/{{thebook.id}}'>Add to Cart!</a></button>
+            </div>
+            <div class= 'Review'>
+                <form>
+                    <label for Post>
+                        <input type='text' name= 'Reviewpost' placeholder="Enter your review here">
+
+                    </label>
+
+                    <label for Submit>
+                        <input type="button" value="Post Review">
+                    </label>
+                </form>
+                <h2>{{thebook.title}} Review</h2>
+
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+    
+</body>
+</html>
+
+
+    
+
+
+
